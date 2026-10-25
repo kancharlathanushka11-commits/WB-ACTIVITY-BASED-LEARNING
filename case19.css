@@ -1,0 +1,727 @@
+
+/* ==========================================
+   TREKWORLD - COMPLETE CSS STYLESHEET
+   Theme: Charcoal, Gold, Ivory and Beige
+   ========================================== */
+
+/* 1. Basic Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FAF7F0;
+    color: #39352F;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 2. Navigation Bar */
+header {
+    background-color: #302F2B;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo,
+.footer-logo {
+    color: #FFFFFF;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #F0BD4F;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.navbar ul li a {
+    color: #FFFFFF;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #F0BD4F;
+}
+
+/* 3. Hero Section */
+.hero {
+    min-height: 570px;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(35, 33, 29, 0.82),
+            rgba(35, 33, 29, 0.18)
+        ),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.tagline {
+    display: inline-block;
+    color: #F0BD4F;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-content h2 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-content p {
+    max-width: 560px;
+    font-size: 17px;
+    color: #F5F0E6;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #F0BD4F;
+    color: #302F2B;
+    padding: 13px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #DDA832;
+    color: #302F2B;
+    transform: translateY(-2px);
+}
+
+.hero-note {
+    position: absolute;
+    right: 7%;
+    bottom: 30px;
+    background-color: rgba(35, 33, 29, 0.7);
+    color: #FFFFFF;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.hero-note span {
+    color: #F0BD4F;
+    margin-right: 5px;
+}
+
+/* 4. About Section */
+.about {
+    padding: 65px 8%;
+    text-align: center;
+    background-color: #F0E7D6;
+}
+
+.about-icon {
+    color: #B78627;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.about h2 {
+    color: #39352F;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about > p {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #625C52;
+}
+
+.stats {
+    max-width: 800px;
+    margin: 35px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stats > div {
+    padding: 18px 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5D9C5;
+    border-radius: 10px;
+}
+
+.stats h3 {
+    color: #B78627;
+    font-size: 30px;
+}
+
+.stats p {
+    color: #625C52;
+    font-size: 14px;
+}
+
+/* 5. Common Section Headings */
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: #A77A22;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #39352F;
+    font-size: 34px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #625C52;
+}
+
+/* 6. Adventure Destinations */
+.adventures {
+    padding: 75px 7%;
+    background-color: #FAF7F0;
+}
+
+.adventure-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.adventure-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5D9C5;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(48, 47, 43, 0.08);
+    transition: 0.3s;
+}
+
+.adventure-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(48, 47, 43, 0.15);
+}
+
+.adventure-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.category {
+    display: inline-block;
+    background-color: #F5E7C6;
+    color: #78571C;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.card-content h3 {
+    color: #39352F;
+    font-size: 21px;
+    margin: 12px 0 8px;
+}
+
+.card-content p {
+    color: #625C52;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-content a {
+    color: #A77A22;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-content a:hover {
+    color: #745019;
+}
+
+/* 7. Quote Banner */
+.quote-banner {
+    padding: 85px 8%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(35, 33, 29, 0.85),
+            rgba(35, 33, 29, 0.30)
+        ),
+        url("https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+}
+
+.quote-banner > div {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.quote-banner .eyebrow {
+    color: #F0BD4F;
+}
+
+.quote-banner h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    line-height: 1.25;
+    margin: 12px 0 18px;
+}
+
+.quote-banner p {
+    color: #F5F0E6;
+    margin-bottom: 25px;
+}
+
+.light-btn {
+    background-color: #FFFFFF;
+    color: #39352F;
+}
+
+.light-btn:hover {
+    background-color: #F0BD4F;
+    color: #302F2B;
+}
+
+/* 8. Packages Section */
+.packages {
+    padding: 75px 7%;
+    background-color: #F0E7D6;
+}
+
+.package-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.package-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5D9C5;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 5px 18px rgba(48, 47, 43, 0.07);
+}
+
+.popular-card {
+    border: 2px solid #D6A63D;
+    background-color: #FFFCF4;
+}
+
+.popular-label {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background-color: #F0BD4F;
+    color: #302F2B;
+    padding: 4px 13px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.package-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    color: #8B8274;
+    font-weight: bold;
+}
+
+.package-icon {
+    color: #B78627;
+    font-size: 28px;
+}
+
+.package-card h3 {
+    color: #39352F;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.package-card > p {
+    color: #625C52;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.package-card .duration {
+    color: #A77A22;
+    font-weight: bold;
+}
+
+.package-card ul {
+    margin: 10px 0 20px;
+}
+
+.package-card ul li {
+    color: #554F45;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.package-bottom {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #E9E0D2;
+}
+
+.package-card .price {
+    color: #A77A22;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.package-card .price span {
+    color: #81796D;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.package-bottom .btn {
+    width: 100%;
+    text-align: center;
+}
+
+.price-note {
+    text-align: center;
+    color: #625C52;
+    font-size: 12px;
+    margin: 30px auto 0;
+}
+
+/* 9. Travel Tips Section */
+.guide {
+    padding: 75px 7%;
+    background-color: #FAF7F0;
+}
+
+.guide-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.guide-card {
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #E5D9C5;
+}
+
+.equipment {
+    background-color: #F0E7D6;
+}
+
+.safety {
+    background-color: #F7F1E4;
+}
+
+.guide-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.guide-card h3 {
+    color: #39352F;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.guide-card p {
+    color: #625C52;
+    margin-bottom: 18px;
+}
+
+.guide-card ul li {
+    color: #514B42;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* 10. Contact Section */
+.contact {
+    padding: 75px 8%;
+    text-align: center;
+    background-color: #302F2B;
+    color: #FFFFFF;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact .eyebrow {
+    color: #F0BD4F;
+}
+
+.contact h2 {
+    color: #FFFFFF;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contact-content > p {
+    color: #F0E7D6;
+    margin-bottom: 25px;
+}
+
+.contact .btn {
+    margin-bottom: 12px;
+}
+
+.contact-content .email-note {
+    color: #D6CDBD;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* 11. Footer */
+footer {
+    padding: 35px 7%;
+    text-align: center;
+    background-color: #24231F;
+    color: #FFFFFF;
+    border-top: 4px solid #F0BD4F;
+}
+
+.footer-logo {
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+footer > p {
+    color: #E6DED0;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 22px 0;
+}
+
+.footer-links a {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #F0BD4F;
+}
+
+footer .copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 18px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* 12. Tablet Screens */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px 22px;
+    }
+
+    .adventure-grid,
+    .package-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+}
+
+/* 13. Mobile Screens */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .navbar ul {
+        gap: 10px 16px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 70px 7%;
+        background-position: center;
+    }
+
+    .hero-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-note {
+        right: 7%;
+        bottom: 15px;
+        font-size: 12px;
+    }
+
+    .about,
+    .adventures,
+    .packages,
+    .guide,
+    .contact {
+        padding: 55px 6%;
+    }
+
+    .about h2,
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stats h3 {
+        font-size: 23px;
+    }
+
+    .stats p {
+        font-size: 11px;
+    }
+
+    .adventure-grid,
+    .package-grid,
+    .guide-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-card img {
+        height: 230px;
+    }
+
+    .quote-banner {
+        padding: 65px 6%;
+    }
+
+    .quote-banner h2 {
+        font-size: 30px;
+    }
+
+    .contact h2 {
+        font-size: 32px;
+    }
+
+    .guide-card {
+        padding: 24px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
